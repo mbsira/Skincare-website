@@ -30,15 +30,15 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-
 /* ─── NAV ─── */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 200;
-  background: var(--cream);
-  border-bottom: 1px solid var(--sage-mid);
-  height: 64px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -53,48 +53,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .nav__logo {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: .08em;
-  color: var(--dark);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--sage);
 }
-.nav__logo span { color: var(--sage); }
 .nav__links {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
+  align-items: center;
 }
 .nav__links a {
   font-size: .72rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #fff;
 }
-.nav__links a:hover { color: var(--dark); }
-.nav__actions {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
+.nav__links a:hover { opacity: .7; }
 .nav__cart-btn {
   position: relative;
   display: flex;
   align-items: center;
-  gap: .4rem;
-  font-size: .72rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--dark);
+  color: #fff;
 }
-.nav__cart-btn:hover { color: var(--sage); }
+.nav__cart-btn:hover { opacity: .7; }
 .nav__cart-btn svg { width: 20px; height: 20px; }
 .cart-badge {
   position: absolute;
-  top: -7px; right: -10px;
+  top: -8px; right: -10px;
   background: var(--sage);
-  color: #fff;
+  color: #000;
   font-size: .6rem;
   font-weight: 700;
-  width: 17px; height: 17px;
+  width: 16px; height: 16px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
 }
@@ -102,7 +93,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ─── HERO ─── */
 .hero {
   position: relative;
-  min-height: 82vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -140,7 +131,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__headline {
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 6vw, 6rem);
-  font-weight: 900;
   line-height: .92;
   color: #fff;
   margin-bottom: 1.75rem;
@@ -169,38 +159,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: background .25s;
 }
 .btn-primary:hover { background: var(--dark); }
-.btn-ghost {
-  font-size: .72rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.6);
-  padding-bottom: 2px;
-  transition: color .2s, border-color .2s;
-}
-.btn-ghost:hover { color: var(--sage); border-color: var(--sage); }
-
-/* ─── MARQUEE ─── */
-.marquee-wrap {
-  background: var(--sage);
-  color: #fff;
-  padding: .8rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.marquee-track {
-  display: inline-flex;
-  gap: 3rem;
-  animation: marquee 22s linear infinite;
-}
-.marquee-track span {
-  font-size: .7rem;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  opacity: .9;
-}
-.marquee-track span.dot { opacity: .4; }
-@keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ─── SECTION HEADER ─── */
 .section-header {
