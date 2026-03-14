@@ -7,8 +7,7 @@ A luxury skincare e-commerce landing page built using **HTML**, **CSS**, and **V
 
 ## Preview
 
-![LUMIÈRE Preview](skincare.jpg)
-
+![LUMIÈRE Preview](./screenshots/skincare.jpg)
 ---
 
 ## Design Philosophy
