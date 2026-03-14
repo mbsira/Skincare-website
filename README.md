@@ -1,5 +1,6 @@
 # LUMIÈRE | Skincare Website
 This is a portfolio project — not a real brand or business.
+🔗 **Live Demo:** [lumière.vercel.app](skincare-website-three.vercel.app)
 
 A luxury skincare e-commerce landing page built using **HTML**, **CSS**, and **Vanilla JavaScript**. The design is inspired by high-end skincare brands like **Zenya**.
 
